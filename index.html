@@ -23,27 +23,27 @@
 	
 </body>
 </html>
-<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery/2.2.2/jquery.js"></script>
 <!--<script src="js/index.js" type="text/javascript" charset="utf-8"></script>-->
 <script type="text/javascript">
-//	var ak = '0QvQZfWva3fm2882sGIaIC6UbRe81XfL';
-//	var geotable_id = 182572;
-//	var region= "218";
-//	var currentCity = "武汉"
+	var ak = '0QvQZfWva3fm2882sGIaIC6UbRe81XfL';
+	var geotable_id = 182572;
+	var region= "218";
+	var currentCity = "武汉"
 	
 	//杭州移动
-	var ak = 'RNYnFjIqp5MkmcL5OWMsudNGhAqH44QL';
-	var geotable_id = 183275;
-	var region= "179";
-	var currentCity = "杭州"
+//	var ak = 'RNYnFjIqp5MkmcL5OWMsudNGhAqH44QL';
+//	var geotable_id = 183275;
+//	var region= "179";
+//	var currentCity = "杭州"
 	
 	//自定义我的位置图标
 	var myIcon = new BMap.Icon("img/address.png",new BMap.Size(20,20));
 	
 	// 百度地图API功能
 	var map = new BMap.Map("allmap");    // 创建Map实例
-	map.centerAndZoom(new BMap.Point(120.215512,30.253083), 15);  // 初始化地图,设置中心点坐标和地图级别  （杭州）
-//	map.centerAndZoom(new BMap.Point(114.311582,30.598467), 15);  //武汉市
+//	map.centerAndZoom(new BMap.Point(120.215512,30.253083), 15);  // 初始化地图,设置中心点坐标和地图级别  （杭州）
+	map.centerAndZoom(new BMap.Point(114.311582,30.598467), 15);  //武汉市
 	
 	map.setCurrentCity(currentCity);          // 设置地图显示的城市 此项是必须设置的
 	map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
@@ -89,7 +89,7 @@
 	//本地检索
 	function getLocalAddress(keyword){
 		console.log(keyword)
-		let url = 'http://api.map.baidu.com/geosearch/v3/local';
+		let url = 'https://api.map.baidu.com/geosearch/v3/local';
 		$.ajax({
 			type:"get",
 			url:url,
@@ -122,7 +122,7 @@
 	    let addr = bssw.lng + ','+ bssw.lat +';'+ bsne.lng +','+ bsne.lat
 	    console.log(addr)
 	    
-	    let url = 'http://api.map.baidu.com/geosearch/v3/bound';
+	    let url = 'https://api.map.baidu.com/geosearch/v3/bound';
 	    $.ajax({
 	    	type:"get",
 	    	url:url,
