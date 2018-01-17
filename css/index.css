@@ -1,0 +1,101 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html{
+	width: 100vw;
+	min-height: 100vh;
+}
+#allmap{
+	width: 100vw;
+	height: 100vh;
+}
+.bottom{
+	border-radius: 6px;
+	background-color: rgb(248,246,243);
+	width: 100vw;
+	position: fixed;
+	bottom: 0;
+}
+.toggle-btn{
+	width: 100%;
+	height: 22px;
+	position: relative;
+}
+.toggle-btn:before{
+	content: "";
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	display: block;
+	width: 50px;
+	height: 8px;
+	border-radius: 5px;
+	background-color:rgb(198,196,191);
+}
+#txt{
+	display: block;
+	width: 93%;
+	padding: 8px 8px 8px 34px;
+	background-color: #fff;
+	border: none;
+	outline: none;
+	margin: 0 3% 3%;
+	border-radius: 5px;
+	line-height: 26px;
+	font-size: 14px;
+	vertical-align: middle;
+	
+	
+}
+.select-box{
+	position: relative;
+}
+.select-box:before{
+	content: "";
+	position: absolute;
+	display: inline-block;
+	left: 20px;
+	top: 12px;
+	width: 18px;
+	height: 18px;
+	background: url(../img/select.png) no-repeat center center;
+	background-size: 18px 18px;
+}
+ul{
+	list-style: none;
+}
+.no-addr{
+	text-align: center;
+	font-size: 14px;
+	line-height: 30px;
+	color: #666;
+	padding-bottom: 10px;
+}
+.addr-list{
+	max-height: 300px;
+	overflow-y: scroll;
+	padding: 0 10px;
+}
+.addr-list .list{
+	border: 1px solid #ccc;
+	background-color: #fff;
+	margin-bottom: 10px;
+	padding: 10px;
+}
+.addr-list .list h4{
+	font-weight: normal;
+	font-size: 14px;
+	color: #666;
+	line-height: 30px;
+}
+.addr-list .list p{
+	font-size: 12px;
+	color: #ccc;
+	line-height: 20px;
+}
+tr,td{
+	border: 1px solid #ccc;
+}
