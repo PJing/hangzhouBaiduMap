@@ -101,7 +101,7 @@
                 'region': region,  //当前城市id
                 'scope': '2',  //显示详细信息
                 'geotable_id': geotable_id,
-                'page_size': 12,
+                'page_size': 15,
                 'ak': ak,  //用户ak
 			},
 			success(res){
@@ -135,7 +135,7 @@
                 'region': region,  //当前城市id
                 'scope': '2',  //显示详细信息
                 'geotable_id': geotable_id,
-                'page_size': 12,
+                'page_size': 15,
                 'ak': ak,  //用户ak
 			},
 			success(res){
@@ -170,7 +170,7 @@
                 'region': region,  //当前城市id
                 'scope': '2',  //显示详细信息
                 'geotable_id': geotable_id,
-                'page_size': 12,
+                'page_size': 15,
                 'ak': ak,  //用户ak
                 'radius':5000     //半径
 			},
@@ -234,6 +234,7 @@
 		if(e.keyCode == 13){
 			var keyword = $('#txt').val();
 			getLocalAddress(keyword);
+			$("#txt").blur();
 		}
 	})
 	
